@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+<!--<suite name="DIA Test Suite" verbose="2" parallel="tests" thread-count="2">-->
+
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+			
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="lambdaTest"/>
+	<parameter name="appType" value="Web"/>
+	<parameter name="appLanguage" value="English"/>
+	<parameter name="appEnvironment" value="QA"/>
+	<parameter name="build" value="Mobile WebApp Test"/>
+	
+	<test name="DIA Regression Test-1">
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="11"/>
+		<parameter name="deviceName" value="Galaxy S21 5G"/>
+		<parameter name="isRealMobile" value="True"/>
+		<parameter name="browserName" value="Chrome"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_2"/>
+		</classes>
+	</test>
+
+	<test name="DIA Regression Test-2">
+		<parameter name="platformName" value="iOS"/>
+		<parameter name="platformVersion" value="15"/>
+		<parameter name="manufacturer" value="Apple"/>
+		<parameter name="deviceName" value="iphone 13 pro max"/>
+		<parameter name="browserName" value="Safari"/>
+		<parameter name="isRealMobile" value="True"/>
+		<parameter name="automationName" value="XCUITest"/>
+
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_2"/>
+		</classes>
+	</test>
+</suite>

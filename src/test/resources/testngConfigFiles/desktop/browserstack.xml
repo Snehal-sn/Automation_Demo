@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+
+	<parameter name="executionPlatform" value="BrowserStack"/>
+	<parameter name="interfaceType" value="Desktop"/>
+	<parameter name="appType" value="Web"/>
+	<parameter name="appLanguage" value="English"/>				
+	<parameter name="appEnvironment" value="QA"/>
+		
+	<test name="DIA Regression Test">	
+		<parameter name="project" value="Browserstack Demo"/>
+		<parameter name="build" value="Desktop-Web Test"/>
+		<parameter name="name" value="Chrome Test 1"/>
+		<parameter name="platformName" value="Windows"/>													
+		<parameter name="platformVersion" value="10"/>
+		<parameter name="browserName" value="Chrome"/>		
+		<parameter name="browserVersion" value="96.0"/>
+					
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_2"/>
+		</classes>
+	</test>
+</suite>

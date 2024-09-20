@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+	
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="Local"/>
+	<parameter name="appType" value="Native"/>
+	<parameter name="appLanguage" value="English"/>
+	<parameter name="launchExistingApp" value="Yes"/>
+		
+	<test name="DIA Regression Test">	
+		<parameter name="automationName" value="UiAutomator2"/>
+		<parameter name="platformName" value="Android"/>			
+		<parameter name="platformVersion" value="11"/>
+		<parameter name="udid" value="emulator-5554"/>
+		<parameter name="deviceName" value="Pixel 4 XL"/>
+		<parameter name="androidAPK" value="EmployeeManagement.apk"/>
+		<parameter name="appPackage" value="com.capgemini.employeeinfo"/>
+		<parameter name="appActivity" value="com.capgemini.employeeinfo.LoginActivity"/>
+		<parameter name="ipaddress" value="0.0.0.0:4723"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_3"/>
+		</classes>
+	</test>
+</suite>

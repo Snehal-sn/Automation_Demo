@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+	
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="Local"/>
+	<parameter name="appType" value="Native"/>
+	<parameter name="appLanguage" value="English"/>
+	<parameter name="launchExistingApp" value="Yes"/>
+
+	<test name="DIA Regression Test">			
+		<parameter name="platformName" value="Android"/>			
+		<parameter name="platformVersion" value="6.0"/>			
+		<parameter name="udid" value="4100d138f278a2e3"/>
+		<parameter name="deviceName" value="Nexus"/>						
+		<parameter name="appPackage" value="com.google.android.googlequicksearchbox"/>
+		<parameter name="appActivity" value="com.google.android.googlequicksearchbox.VoiceSearchActivity"/>	
+		<parameter name="ipaddress" value="127.0.0.1"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.TextToSpeech_1"/>
+		</classes>
+	</test>
+</suite>

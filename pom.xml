@@ -1,0 +1,263 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>client-app-tdd-tests</groupId>
+<artifactId>client-app-tdd-tests</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+<packaging>jar</packaging>	  
+<name>Client App TDD Test</name>
+<description>Automation suite for appname application</description>  
+	<properties>
+        <aspectj.version>1.8.13</aspectj.version>
+        <jdk.source.version>1.8</jdk.source.version>
+        <jdk.target.version>1.8</jdk.target.version>
+    </properties>
+
+	<repositories>
+	    <repository>
+	    	<id>clojars.org</id>
+	      	<url>http://repo.clojars.org/</url>
+	    </repository>
+	     
+	    <repository>
+		    <id>sonatype-nexus-snapshots</id>
+		    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	  	</repository>
+	</repositories>
+  
+	<pluginRepositories>
+		<pluginRepository>
+	   		<id>sonatype-nexus-snapshots</id>
+	      	<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	  	</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>					
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.13.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>io.appium</groupId>
+		    <artifactId>java-client</artifactId>
+		    <version>7.3.0</version>
+		</dependency>	
+			
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>28.1-jre</version>
+		</dependency>
+			
+		<dependency>
+        	<groupId>io.github.sukgu</groupId>
+        	<artifactId>automation</artifactId>
+       		<version>0.0.12</version>
+        </dependency>
+        
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>6.14.3</version>
+		    <scope>compile</scope>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.17</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.rest-assured</groupId>            
+			<artifactId>rest-assured</artifactId>  
+			<version>3.0.2</version>
+			<scope>test</scope>
+		</dependency> 
+			
+		<dependency>   
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180813</version>
+		</dependency>
+		 
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId> 
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>     
+		
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.13.0</version>
+            <scope>test</scope>
+        </dependency>
+	
+		<dependency>
+		    <groupId>io.qameta.allure</groupId>
+		    <artifactId>allure-attachments</artifactId>
+		    <version>2.13.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-commandline -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-commandline</artifactId>
+			<version>2.13.8</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.sun.mail</groupId>
+		    <artifactId>javax.mail</artifactId>
+		    <version>1.6.2</version>
+		</dependency>
+		
+		<!--<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>sqljdbc4</artifactId>
+		    <version>4.0</version>
+		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>org.mongodb</groupId>-->
+<!--			<artifactId>mongodb-driver-sync</artifactId>-->
+<!--			<version>4.4.1</version> &lt;!&ndash; Use the latest version available &ndash;&gt;-->
+<!--		</dependency>-->
+
+
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>10.2.0.jre8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongodb-driver-sync</artifactId>
+			<version>4.10.1</version>
+		</dependency>
+
+		<dependency>
+	        <groupId>com.galenframework</groupId>
+	        <artifactId>galen-java-support</artifactId>
+	        <version>2.3.7</version>
+	    </dependency>
+				
+		<dependency>
+            <groupId>in.co.gauravtiwari.voice</groupId>
+            <artifactId>VoiceAutomationClient</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+              
+        <dependency>
+           <groupId>net.sf.sociaal</groupId>
+           <artifactId>freetts</artifactId>
+           <version>1.2.2</version>
+       </dependency>
+            
+      	<dependency>
+		    <groupId>com.applitools</groupId>
+		    <artifactId>eyes-selenium-java3-jersey1x</artifactId>
+		    <version>3.35.3</version>
+		</dependency>
+				
+		<dependency>
+		    <groupId>com.browserstack</groupId>
+		    <artifactId>automate-testassist</artifactId>
+		    <version>1.1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.lambdatest</groupId>
+			<artifactId>lambdatest-tunnel-binary</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+        <dependency>
+            <groupId>client-app-tdd-tests</groupId>
+            <artifactId>client-app-tdd-tests</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+		
+	<build>
+		 <pluginManagement>
+			 <plugins>					           
+            	<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+				  	<artifactId>maven-compiler-plugin</artifactId>
+				  	<version>3.7.0</version>
+				   	<configuration>
+					  	<source>${jdk.source.version}</source>
+					  	<target>${jdk.target.version}</target>
+					 </configuration>
+				</plugin>
+				
+				<plugin>
+				  <groupId>org.apache.maven.plugins</groupId>
+				  <artifactId>maven-surefire-plugin</artifactId>
+				  <version>2.18</version>
+				  <inherited>true</inherited>				  				
+				  <configuration>
+				  		<testFailureIgnore>true</testFailureIgnore>				  				  					  
+		                <argLine>
+		                	-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+		                </argLine>	                
+		                <suiteXmlFiles>
+							<suiteXmlFile>${basedir}/src/test/resources/testngConfigFiles/desktop/local.xml</suiteXmlFile>
+				  		</suiteXmlFiles>
+						<forkCount>0</forkCount>
+	                </configuration>
+	                
+	                <dependencies>
+	                    <dependency>
+	                        <groupId>org.aspectj</groupId>
+	                        <artifactId>aspectjweaver</artifactId>
+	                        <version>${aspectj.version}</version>
+	                    </dependency>
+	                </dependencies>
+				</plugin>	
+				
+			    <plugin>
+			        <groupId>com.browserstack</groupId>
+			        <artifactId>automate-maven-plugin</artifactId>
+			        <version>1.1.0</version>
+			        <configuration>
+			            <source>${jdk.source.version}</source>
+			            <target>${jdk.target.version}</target>
+			            <complianceLevel>${jdk.source.version}</complianceLevel>
+			        </configuration>
+			        <executions>
+			        	<execution>
+			            	<goals>
+			              		<goal>test-compile</goal>
+			            	</goals>
+			         	</execution>
+			        </executions>
+			      </plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	<reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+				<configuration>
+					<reportDirectory>allure-results</reportDirectory>
+				</configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

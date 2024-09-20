@@ -1,0 +1,57 @@
+interfaceType = Desktop/Mobile/Windows/Api
+executionPlatform = Local/BrowserStack/SauceLabs/TestObject/Perfecto/pCloudy/Kobiton/BitBar/SeeTest/MicrofocusMC
+appType = NAtive/Hybrid/Web
+appLanguage = English/Sapnish/App Supported any language
+appEnvironment = QA/Dev/Staging	
+launchExistingApp = Yes/No
+platformName = Windows/Mac/Linux/Android/iOS
+platformVersion = Any valid OS version
+automationName = Appium/XCUITest
+udid = Valid device id
+deviceName = Valid device name
+browserName = IE/Chrome/Firefox
+browserVersion = Any valid vesion
+iOSDeviceType = Real/Simulator
+wdaPort = Valid port
+webkitDebugProxyPort = Valid proxy port
+language = fr/Any valid simulator language
+locale = fr_CA/Any valid simulator supported language
+
+//BrowserStack
+project = Any valid project name
+build = Any valid build name
+
+//SauceLabs
+name = Run session name
+appiumVersion = Any valid Appium version name supported by SauceLabs
+deviceOrientation = LANDSCAPE/PORTRAIT
+
+//TestObjcet
+apiKey = Any valid API key
+suiteName = Any valid suite name
+testName = Any valid test name
+
+//Perfecto
+manufacturer = Any valid manufacturer
+model = Any valid manufacturer
+
+//Kobiton
+sessionName = Any valid session name
+sessionDesc = Any valid session desc
+
+//BitBar
+testRun = Any valid test name
+
+//Native & Hybrid Application details
+androidAPK = Android APK name
+appPackage = Android App Package name
+appActivity = Android App activity name
+iOSIPA = iOS IPA name
+iOSAPP = iOS APP name
+bundleId = iOS bundle Id
+
+//Parallel execution
+ipaddress = Any valid IP address
+
+//Windows
+appPath = Any valid windows app path e.g. Microsoft.WindowsCalculator_8wekyb3d8bbwe!App

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+	
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="BitBar"/>
+	<parameter name="appType" value="Native"/>
+	<parameter name="appLanguage" value="English"/>	
+	
+	<test name="DIA Regression Test">		
+		<parameter name="project" value="Android Native"/>	
+		<parameter name="testRun" value="Run 1"/>
+		<parameter name="platformName" value="android"/>						
+		<parameter name="deviceName" value="Nexus 6"/>		
+		<parameter name="androidAPK" value="128714804"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.MobileNativeApp_1"/>
+		</classes>
+	</test>
+</suite>

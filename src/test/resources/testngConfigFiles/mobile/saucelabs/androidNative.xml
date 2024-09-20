@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+			
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="SauceLabs"/>
+	<parameter name="appType" value="Native"/>
+	<parameter name="appLanguage" value="English"/>	
+		
+	<test name="DIA Regression Test">		
+		<parameter name="name" value="Demo Android Run"/>
+		<parameter name="appiumVersion" value="1.13.0"/>
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="6.0"/>	
+		<parameter name="deviceName" value="Android Emulator"/>
+		<parameter name="deviceOrientation" value="portrait"/>	
+		<parameter name="androDIAK" value="sauce-storage:EmployeeManagement.apk"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.MobileNativeApp_1"/>
+		</classes>
+	</test>
+</suite>

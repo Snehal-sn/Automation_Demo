@@ -1,0 +1,39 @@
+#Declaring objects with css and xpath locators
+@objects
+  header               css     div.fusion-secondary-header
+  sw-logo              css     .fusion-logo-link
+  container			   xpath	(//div[@class='fusion-row'])[1]
+  authorLnk			   xpath	(//span[@class='menu-text fusion-button button-default button-large'])[1]
+  siteauthorLnk		   xpath	//span[@class='menu-text fusion-button button-default button-large']
+  
+
+ 
+#Home Page Tag
+= Home Page =
+	#This is for Desktop
+	@on mobile
+	#Header properties
+	header:
+		inside screen 0px top
+        inside screen 0px left
+        inside screen 0px right
+ 
+    #Logo properties
+    sw-logo:
+    	#below the header
+        below header
+        #Image comparison with %2 precision ratio
+        image file sw-logo.png, error %5
+           
+   	#Container
+	container:
+		color-scheme 2% white
+      
+	#Author link
+	authorLnk:
+		inside container
+		text contains "WANT TO BE AN AUTHOR?"
+       
+	#Site link
+	siteauthorLnk:
+       	aligned vertically left authorLnk

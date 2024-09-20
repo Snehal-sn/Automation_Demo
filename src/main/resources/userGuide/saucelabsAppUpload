@@ -1,0 +1,16 @@
+Sauce Uploaded installation:
+	npm install --save sauce-uploader
+	npm install -g sauce-uploader
+	
+Command:
+	curl -u <UserName>:<AccessKey> -X POST -H "Content-Type: application/octet-stream" https://saucelabs.com/rest/v1/storage/<UserName>/EMpMgnt?overwrite=true --data-binary @C:\EmployeeManagement.app.zip
+	
+Response: 
+	{"username":"<UserName>","filename":"EmployeeManagement.app.zip","size":404969,"md5":"c574a039d7723bec89ee974edee3d13d","etag":"a35c9ed53ce8ce6e59f414bc7b5acd20"}	
+
+TestNG:
+	Android:
+		<parameter name="androidAPK" value="sauce-storage:EmployeeManagement.apk"/>
+		
+	iOS:
+		<parameter name="iOSAPP" value="sauce-storage:EmployeeManagement.app.zip"/>

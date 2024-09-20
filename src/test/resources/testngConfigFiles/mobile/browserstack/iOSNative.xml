@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+	
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="BrowserStack"/>
+	<parameter name="appType" value="Native"/>
+	<parameter name="appLanguage" value="English"/>	
+	
+	<test name="DIA Regression Test">		
+		<parameter name="automationName" value="XCUITest"/>
+		<parameter name="project" value="MS Teams Demo"/>
+		<parameter name="build" value="iOS"/>
+		<parameter name="platformName" value="iOS"/>
+		<parameter name="platformVersion" value="10"/>
+		<parameter name="deviceName" value="iPhone 7"/>
+		<parameter name="iOSIPA" value="bs://11cb941df16147379b5ad1de6b31ac64d2aefe12"/>
+		<parameter name="bundleId" value="com.Sogeti.EmployeeManagement"></parameter>		
+		
+		<classes>
+			<class name="com.client.app.uitests.module.MobileNativeApp_1"/>
+		</classes>
+	</test>
+</suite>

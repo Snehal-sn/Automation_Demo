@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+			
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="TestObject"/>
+	<parameter name="appType" value="Web"/>
+	<parameter name="appLanguage" value="English"/>
+	<parameter name="appEnvironment" value="QA"/>
+	
+	<test name="DIA Regression Test">		
+		<parameter name="apiKey" value="E8B8859EA9CD44D9A0EEB32E09CD6988"/>
+		<parameter name="suiteName" value="Android Demo"/>
+		<parameter name="testName" value="Web"/>
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="7"/>	
+		<parameter name="deviceName" value="LG_Nexus_5_real"/>
+		<parameter name="browserName" value="Chrome"/>		
+		
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_1"/>
+		</classes>
+	</test>
+</suite>

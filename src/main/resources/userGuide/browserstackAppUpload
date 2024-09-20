@@ -1,0 +1,19 @@
+Download and install Curl:
+	https://curl.haxx.se/download.html
+
+Command:
+	curl -u "<UserName>:<AccessKey>" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@<AppFilePath>"
+
+Response:
+	{"app_url":"bs://50901c155c60bd6b445fddee6a2f703gh"}\
+	
+TestNG:
+	Android:
+		<parameter name="androidAPK" value="bs://2ba8197217b7a1bb70ce993e0d03"/>
+		
+	iOS:
+		<parameter name="iOSIPA" value="bs://a674167a32c96989557a1a30c35921"/>
+		
+Local testing: 
+	Download BrowserStackLocal.exe and run below command on CMD
+	BrowserStackLocal.exe --key ACCESS_KEY --local-identifier <IdentifierString, any random char string>

@@ -1,0 +1,15 @@
+Download and install Curl:
+	https://curl.haxx.se/download.html
+	
+Command:
+	curl -X POST -u <AccessKey>: -F "file=@AppfilePath" "https://cloud.bitbar.com/api/v2/me/files"
+
+Response:
+		{"id":128714564,"selfURI":null,"createTime":156189323400,"fileProperties":[{"id":11812440,"selfURI":null,"key":"min_sdk","value":"23"},{"id":1180441,"selfURI":null,"key":"main_activity","value":"com.capgemini.employeeinfo.LoginActivity"},{"id":1180442,"selfURI":null,"key":"package_name","value":"com.capgemini.employeeinfo"},{"id":1180443,"selfURI":null,"key":"code_signers","value":"rO0ABXVyABtbTGphdmEuc2VjdXJpdHkuQ29kZVNpZ25lcjtFiQ96PNx7owIAAHhwAAAAAXNyABhqYXZhLnNlY3VyaXR5LkNvZGVTaWduZXJeovpmyyGarQIAAkwADnNpZ25lckNlcnRQYXRodAAdTGphdmEvc2VjdXJpdHkvY2VydC9DZXJ0UGF0aDtMAAl0aW1lc3RhbXB0ABlMamF2YS9zZWN1cml0eS9UaW1lc3RhbXA7eHBzcgAnamF2YS5zZWN1cml0eS5jZXJ0LkNlcnRQYXRoJENlcnRQYXRoUmVwKdmuTUb8bhMCAAJbAARkYXRhdAACW0JMAAR0eXBldAASTGphdmEvbGFuZy9TdHJpbmc7eHB1cgACW0Ks8xf4BghU4AIAAHhwAAADjzCCA4swggOHMIICb6ADAgECAgQR1NzMMA0GCSqGSIb3DQEBCwUAMHQxCzAJBgNVBAYTAjkxMRQwEgYDVQQIEwtNYWhhcmFzaHRyYTEPMA0GA1UEBxMGTXVtYmFpMRIwEAYDVQQKEwlDYXBnZW1pbmkxEDAOBgNVBAsTB1Rlc3RpbmcxGDAWBgNVBAMTD0NhcGdlbWluaSBJbmRpYTAeFw0xODA1MjIwNTMzMzdaFw00MzA1MTYwNTMzMzdaMHQxCzAJBgNVBAYTAjkxMRQwEgYDVQQIEwtNYWhhcmFzaHRyYTEPMA0GA1UEBxMGTXVtYmFpMRIwEAYDVQQKEwlDYXBnZW1pbmkxEDAOBgNVBAsTB1Rlc3RpbmcxGDAWBgNVBAMTD0NhcGdlbWluaSBJbmRpYTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIOVRUMIOZ0uCkDvoFqbxT/3H5zNuP2bCgPUQ+9XduqDKVo6ygWU1jHrXoSMcbfUxwAMgCVwZQQM0f8hanhuMNV2EHP4zoMRqCmz+UbK5PksjYmOdlJR6Lo/VvKiE2ePlcKZGiu6oMatYtgZeOiLg3QxlpJCU6Gsh+KY0uXu3TmR+UyZCgvwizJWlFS6+XMBgx8XoFKGFHKe5n61MaUCIaOzLJSEZZnn91Ru8YdMqyPkmeFxTw7LqtsOPV/Ucm/pOvWusvDHHFLKJ12THvCjOTMBU8w2MUIrXpIqaNw2/4gVvCP2KMFwNAjONlq1gVvEzKBoIEpUsRx2VQE5QJhelF8CAwEAAaMhMB8wHQYDVR0OBBYEFNeowjghs3mO4AbahpH28VzDjP9OMA0GCSqGSIb3DQEBCwUAA4IBAQBT3oRuuecipKG9Sv2IBDlCIr1h3Xt/X9TXYHAJY3n75KyH1xZcb25LM5dhMt43g+Rc/q5TI3qMrWFekkfYls7VDVYULgR0ffMdNUt/2K2WWRTzRTiD/C3k8RCJp8UYl+b6zBzML+Y7ZsiW3vT5p0I05nK4IODEvzbW5a3Ak16SHtlUim86GcVdgMtR3Tik0e5LODE9oFb94nxxI65Yrlp9itTlm8LEszFHXvnEEXX2EwGwl6Wf2/IPEiScF9A2utlFc0Kb9/FJKpFb8b7Jp1QJjCHbOFHtkjaFNEPpD9fsH0Ncg9zS/+bENo92KH7LcEnlW6hOSFB3DkJ/Wl+YRZ+qdAAFWC41MDlw"}],"state":"READY","name":"EmployeeManagement.apk","size":1678398,"directUrl":"https://cloud.bitbar.com/cloud/api/v2/me/files/128714804/file","iconDirectUrl":"https://cloud.bitbar.com/cloud/api/v2/me/files/128714804/icon","mimetype":"application/vnd.android.package-archive","direction":"INPUT","inputType":"APPLICATION","duplicate":true,"userEmail":"a.b@xyz.com","userId":34544700,"shared":false}
+
+TestNG:
+	Android:
+		<parameter name="androidAPK" value="128714564"/>
+		
+	iOS:
+		<parameter name="iOSIPA" value="128714564"/>

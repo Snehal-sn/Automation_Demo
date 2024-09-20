@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="DIA Test Suite" parallel="tests" thread-count="2" verbose="2">
+<!--<suite name="DIA Test Suite" verbose="1">-->
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="org.testng.reporters.EmailableReporter2"/>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+	
+	<parameter name="interfaceType" value="Desktop"/>
+	<parameter name="executionPlatform" value="Local"/>				
+	<parameter name="appType" value="Web"/>
+	<parameter name="appLanguage" value="English"/>
+
+<!--	<test name="DIA Regression Test1 - CareSource Demo">-->
+<!--		<parameter name="browserName" value="Chrome"/>-->
+<!--		<parameter name="appEnvironment" value="Dev"/>-->
+<!--		<classes>-->
+<!--			<class name="com.client.app.uitests.module.WebApp_1"/>-->
+<!--		</classes>-->
+<!--	</test>&ndash;&gt;-->
+<!--</test>&ndash;&gt;-->
+<!--		<test name="DIA Regression Test2 - OrangeHRM Demo">-->
+<!--		<parameter name="browserName" value="Chrome"/>-->
+<!--		<parameter name="appEnvironment" value="Apriso"/>-->
+<!--		<classes>-->
+<!--			<class name="com.client.app.uitests.module.WebApp_4"/>-->
+<!--		</classes>-->
+<!--	</test>-->
+
+<!--	<test name="Verify the order is completed or not by given data">-->
+<!--		<parameter name="browserName" value="Chrome"/>-->
+<!--		<parameter name="appEnvironment" value="Apriso"/>-->
+<!--		<classes>-->
+<!--			<class name="com.client.app.uitests.module.WebApp_6"/>-->
+<!--		</classes>-->
+<!--	</test>-->
+
+	<test name="Verify the Pdf is download successfully for all orders">
+		<parameter name="browserName" value="Chrome"/>
+		<parameter name="appEnvironment" value="Apriso"/>
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_5"/>
+		</classes>
+	</test>
+<!--&lt;!&ndash;	<test name="Verify the Pdf is download successfully for all orders">&ndash;&gt;-->
+<!--		<parameter name="browserName" value="Chrome"/>-->
+<!--		<parameter name="appEnvironment" value="Apriso"/>-->
+<!--		<classes>-->
+<!--			<class name="com.client.app.uitests.module.WebApp_6"/>-->
+<!--		</classes>-->
+<!--	</test>-->
+
+<!--	<test name="Apriso Order creation Test1 ">-->
+<!--		<parameter name="browserName" value="Chrome"/>-->
+<!--		<parameter name="appEnvironment" value="Apriso"/>-->
+<!--		<classes>-->
+<!--			<class name="com.client.app.uitests.module.WebApp_4"/>-->
+<!--		</classes>-->
+<!--	</test>-->
+
+</suite>

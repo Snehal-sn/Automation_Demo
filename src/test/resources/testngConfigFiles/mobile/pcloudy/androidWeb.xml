@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+			
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="pCloudy"/>
+	<parameter name="appType" value="Web"/>
+	<parameter name="appLanguage" value="English"/>
+	<parameter name="appEnvironment" value="QA"/>
+	
+	<test name="DIA Regression Test">		
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="8.0"/>	
+		<parameter name="manufacturer" value="Samsung"/>	
+		<parameter name="deviceName" value="Samsung_GalaxyS8+_Android_8.0.0"/>		
+		<parameter name="browserName" value="Chrome"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_1"/>
+		</classes>
+	</test>
+</suite>

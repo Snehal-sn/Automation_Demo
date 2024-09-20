@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+	<parameter name="project" value="LambdaTest Demo"/>
+	<parameter name="build" value="Mobile-WebApp Test"/>
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="lambdaTest"/>
+	<parameter name="appType" value="Native"/>
+	<parameter name="appLanguage" value="English"/>
+	
+	<test name="DIA Regression Test-1">
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="11"/>
+		<parameter name="deviceName" value="Galaxy S21 5G"/>
+		<parameter name="isRealMobile" value="True"/>
+
+		<parameter name="androidAPK" value="lt://APP10160601531662465259982550"/>
+		<parameter name="appPackage" value="com.capgemini.employeeinfo"/>
+		<parameter name="appActivity" value="com.capgemini.employeeinfo.LoginActivity"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.MobileNativeApp_1"/>
+		</classes>
+	</test>
+	<test name="DIA Regression Test-2">
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="11"/>
+		<parameter name="deviceName" value="Galaxy S10"/>
+		<parameter name="isRealMobile" value="True"/>
+
+		<parameter name="androidAPK" value="lt://APP10160601531662465259982550"/>
+		<parameter name="appPackage" value="com.capgemini.employeeinfo"/>
+		<parameter name="appActivity" value="com.capgemini.employeeinfo.LoginActivity"/>
+
+		<classes>
+			<class name="com.client.app.uitests.module.MobileNativeApp_1"/>
+		</classes>
+	</test>
+</suite>

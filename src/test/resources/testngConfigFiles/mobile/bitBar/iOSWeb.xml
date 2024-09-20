@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+			
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="BitBar"/>
+	<parameter name="appType" value="Web"/>
+	<parameter name="appLanguage" value="English"/>	
+	<parameter name="appEnvironment" value="QA"/>
+	
+	<test name="DIA Regression Test">		
+		<parameter name="project" value="iOS Web"/>	
+		<parameter name="testRun" value="Run 1"/>
+		<parameter name="platformName" value="ios"/>						
+		<parameter name="automationName" value="XCUITest"/>
+		<parameter name="deviceName" value="Apple"/>
+		<parameter name="browserName" value="Safari"/>	
+		
+		<classes>
+			<class name="com.client.app.uitests.module.WebApp_2"/>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+		
+	<parameter name="interfaceType" value="Mobile"/>	
+	<parameter name="environment" value="Local"/>
+	<parameter name="appType" value="Native"/>
+	<parameter name="appLanguage" value="English"/>
+	<parameter name="language" value="fr"/>
+	<parameter name="locale" value="fr_CA"/>	
+	
+	<test name="DIA Regression Test">		
+		<parameter name="platformName" value="iOS"/>
+		<parameter name="platformVersion" value="10.0"/>
+		<parameter name="automationName" value="XCUITest"/>	
+		<parameter name="iOSDeviceType" value="Simulator"/> <!-- Real, Simulator -->					
+		<parameter name="udid" value="399dcea84c75d1400757b3"/>
+		<parameter name="deviceName" value="iPhone 6s"/>	
+		<parameter name="iOSAPP" value="EmployeeManagement.app"></parameter>				
+		<parameter name="bundleId" value="com.Sogeti.EmployeeManagement"></parameter>	
+		<parameter name="ipaddress" value="127.0.0.1"/>
+		
+		<classes>
+			<class name="com.client.app.uitests.module.MobileNativeApp_1"/>
+		</classes>
+	</test>
+</suite>

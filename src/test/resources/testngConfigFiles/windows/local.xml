@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+	
+	<parameter name="interfaceType" value="Windows"/>		
+	<parameter name="executionPlatform" value="Local"/>
+	<parameter name="appLanguage" value="English"/>
+	
+	<test name="DIA Test Regression Test">															
+		<parameter name="appPath" value="Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"/>
+		<parameter name="ipAddress" value="127.0.0.1"/>	
+					
+		<classes>
+			<class name="com.client.app.uitests.module.WindowsApp_1"/>
+		</classes>
+	</test>
+</suite>

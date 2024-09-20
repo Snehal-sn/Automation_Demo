@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DIA Test Suite" verbose="2">
+	<listeners>
+		<listener class-name="com.sogeti.dia.common.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.TestListeners"></listener>
+		<listener class-name="com.sogeti.dia.common.listeners.SuiteListeners"></listener>
+	</listeners>
+			
+	<parameter name="interfaceType" value="Mobile"/>		
+	<parameter name="executionPlatform" value="Kobiton"/>
+	<parameter name="appType" value="Native"/> <!-- Native/Hybrid/Web -->
+	<parameter name="appLanguage" value="English"/> <!-- English/Spanish -->
+	
+	<test name="DIA Regression Test">		
+		<parameter name="sessionName" value="iOS Native App"/>
+		<parameter name="sessionDesc" value="iOS Native App Testing"/>
+		<parameter name="platformName" value="iOS"/>
+		<parameter name="platformVersion" value="11.4"/>	
+		<parameter name="deviceName" value="iPad Pro 10.5 (Wi-Fi)"/>
+		<parameter name="deviceOrientation" value="portrait"/>
+		<parameter name="iOSIPA" value="kobiton-store:35301"/>
+		<parameter name="bundleId" value="com.Sogeti.EmployeeManagement"></parameter>
+	
+		<classes>
+			<class name="com.client.app.uitests.module.MobileNativeApp_1"/>
+		</classes>
+	</test>
+</suite>
